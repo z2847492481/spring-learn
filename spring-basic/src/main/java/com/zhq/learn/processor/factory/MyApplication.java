@@ -1,6 +1,6 @@
 package com.zhq.learn.processor.factory;
 
-import com.zhq.learn.factory3.Config;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.support.GenericApplicationContext;
@@ -16,7 +16,8 @@ public class MyApplication {
         GenericApplicationContext context = new GenericApplicationContext();
 
         context.registerBean("config", Config.class);
-        context.registerBean(MyComponentScanPostProcessor.class); // 处理@Resource @PostConstruct @PreDestroy
+        //context.registerBean(MyComponentScanPostProcessor.class);
+        context.registerBean(MyBeanAnnotationPostProcessor.class);
         context.refresh();
         for (String beanDefinitionName : context.getBeanDefinitionNames()) {
             log.info("beanDefinitionName:{}", beanDefinitionName);
