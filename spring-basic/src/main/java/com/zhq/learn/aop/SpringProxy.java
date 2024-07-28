@@ -32,7 +32,6 @@ public class SpringProxy {
         ProxyFactory proxyFactory = new ProxyFactory();
         proxyFactory.setTarget(target);
         proxyFactory.addAdvisor(advisor);
-        proxyFactory.setProxyTargetClass();
         MyService proxy = (MyService) proxyFactory.getProxy();
         proxy.save();
         proxy.update();
