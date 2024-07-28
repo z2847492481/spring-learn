@@ -1,4 +1,4 @@
-package com.zhq.learn.proxy.jdk.aop;
+package com.zhq.learn.aop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
